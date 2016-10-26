@@ -5,40 +5,37 @@
     <title>Интернет-магазин "Техномарт"</title>
 </head>
 <body>
-    <!--header-container в дальнейшем будет иметь отличный от body цвет.
-    Верхняя темная полоса будет сделана с помощью border-top.-->
     <div class="container">
         <header class="main-header">
             <section class="main-header-top">
-                <!--Не уверен, что логотип будет картинкой, однако пока сделал так-->
-                <div class="header-logo">
+                <div class="main-header-top-left">
                     <img src="http://placehold.it/220x47" alt="Техномарт">
+                    <form  action="#" method="get">
+                        <input type="text" id="search-field" name="search-request">
+                    </form>
                 </div>
-                <div class="search">
-                    <input type="text" id="search-field" name="search-request">
-                </div>
-                <div class="favorites">
+                <div class="main-header-top-right">
                     <a href="#">Закладки</a>
-                </div>
-                <div class="cart">
                     <a href="#">Корзина</a>
-                </div>
-                <div class="order">
                     <a href="#">Оформить заказ</a>
                 </div>
             </section>
-            <section class="contact-information">
-                <p>
-                    Интернет-магазин
-                    строительных материалов
-                    и инструментов для ремонта
-                </p>
-            <div class="contact-phone">
-                +7&nbsp;(812)&nbsp;555-05-55
-            </div>
-            <div class="company-address">
-                г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            </div>
+            <section class="main-header-bottom">
+                <div class="company-business">
+                    <p>
+                        Интернет-магазин
+                        строительных материалов
+                        и инструментов для ремонта
+                    </p>
+                </div>
+                <div class="company-contacts">
+                    <div class="company-contacts-phone">
+                        +7&nbsp;(812)&nbsp;555-05-55
+                    </div>
+                    <div class="company-contacts-address">
+                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                    </div>
+                </div>
             </section>
             <section class="authorization">
                 <div class="authorization-login">
@@ -323,21 +320,22 @@
                 </div>
             </div>
         </footer>
-        <div class="modal-window" id="write-us">
-          <form action="#" method="post">
-            <p>
-              Заполните, пожалуйста эту форму.
-            </p>
-            <label for="write-us-name">Как к Вам обращаться?</label>
-            <input type="text" id="write-us-name" name="user-name" placeholder="Иван Васильевич">
-            <label for="write-us-phone">Ваш номер телефона</label>
-            <input type="tel" id="write-us-phone" name="user-phone" placeholder="+74951234567">
-            <label for="write-us-mail">Ваша электронная почта</label>
-            <input type="email" id="write-us-mail" name="user-mail" placeholder="customer@gmail.com">
-            <label for="write-us-text">Введите Ваше сообщение</label>
-            <textarea id="write-us-text" name="user-message">Ваш текст</textarea>
-            <button type="submit">Отправить</button>
-            <button id="write-us-close-btn">Закрыть</button>
+        <div class="write-us">
+            <form action="#" method="post">
+                <div class="modal-window-container">
+                    <div class="modal-window-top">
+                        <button id="write-us-close-btn">X</button>
+                        <label for="write-us-name">Ваше имя:</label>
+                        <input type="text" id="write-us-name" name="user-name" placeholder="Представьтесь, пожалуйста">
+                        <label for="write-us-mail">Ваш e-mail:</label>
+                        <input type="email" id="write-us-mail" name="user-mail" placeholder="Для отправки ответа">
+                        <label for="write-us-text">Текст письма:</label>
+                        <textarea id="write-us-text" name="user-message">В свободной форме</textarea>
+                    </div>
+                    <div class="modal-window-bottom">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </div>
           </form>
         </div>
 </body>
