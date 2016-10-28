@@ -1,0 +1,25 @@
+/*Текстовые стили*/
+
+body {
+    font-size: 13px;
+    line-height: 24px;
+    color: #000;
+    font-weight: normal;
+    font-family: "PT Sans", "Myriad Pro", sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 30px;
+    color: #32425c;
+    font-weight: normal;
+    font-family: "Cuprum", "Myriad Pro", sans-serif;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: normal;
+    color: #000;
+    font-weight: normal;
+    font-family: "Cuprum", "Myriad Pro", sans-serif;
+}
