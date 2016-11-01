@@ -6,6 +6,13 @@ body {
     color: #000;
     font-weight: normal;
     font-family: "PT Sans", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*Забегая вперёд, решил смастерить бэкграунд*/
+    background-image:
+            linear-gradient(to bottom, #293449 42px, #f1f5f7 42px, #f1f5f7 320px,
+            #fff 320px, #fff 1793px, #f1f5f7 1793px, #f1f5f7 2315px,
+            #fff 2315px, #fff 2851px, #32425c 2851px, #32425c 3045px, #293449 3045px);
 }
 
 h1 {
@@ -22,4 +29,263 @@ h2 {
     color: #000;
     font-weight: normal;
     font-family: "Cuprum", Arial, sans-serif;
+}
+
+
+.product p {
+    font-size: 18px;
+}
+
+.price,
+.product .button {
+    font-size: 17px;
+}
+
+div[class^="item-"] h2{
+    font-size: 24px;
+}
+
+div[class^="item-"] a,
+div[class^="item-"] span {
+    font-size: 14px;
+}
+
+/*Нулевой размер шрифта, для удаления отступов в inline-block*/
+.main-content-catalogue {
+    font-size: 0;
+}
+
+.popular-products {
+    font-size: 0;
+}
+
+.popular-brands {
+    font-size: 0;
+}
+
+/*Стили для <header> и его потомков*/
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+    outline: 1px solid red;
+}
+
+.main-header {
+    outline: 1px solid green;
+    width: 940px;
+    min-height: 320px;
+    background-color: #f1f5f7;
+    margin-bottom: 60px;
+}
+
+.main-header-top {
+    outline: 1px solid yellow;
+    margin-bottom: 10px;
+    background-color: #293449;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-logo {
+    width: 110px;
+    height: 17px;
+    outline: 1px solid yellow;
+    display: inline-block;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    padding-left: 55px;
+    padding-right: 55px;
+    background-color: #ee3643;
+    border-bottom: 5px solid #b52933;
+    float: left;
+}
+
+
+.header-search {
+    outline: 1px solid yellow;
+    min-height: 42px;
+    width: 250px;
+    float: left;
+    border-bottom: 5px solid #f1f5f7;
+}
+
+
+
+.main-header-top-right {
+    outline: 1px solid yellow;
+    width: 470px;
+    min-height: 42px;
+    float: right;
+    border-bottom: 5px solid #f1f5f7;
+}
+
+.main-header-bottom {
+    outline: 1px solid yellow;
+    width: 940px;
+
+}
+
+.main-header-bottom-left {
+    outline: 1px solid yellow;
+    width: 310px;
+    min-height: 153px;
+    float: left;
+}
+
+
+.main-header-bottom-middle {
+    outline: 1px solid yellow;
+    width: 320px;
+    min-height: 153px;
+    float: left;
+}
+
+.authorization {
+    outline: 1px solid yellow;
+    width: 310px;
+    float: right;
+    min-height: 153px;
+}
+
+.main-menu {
+    outline: 1px solid yellow;
+    width: 940px;
+    min-height: 55px;
+}
+
+.main-menu li {
+    display: inline-block;
+}
+
+/*Стили для main и его потомков*/
+.catalogue-left,
+.catalogue-right {
+    outline: 1px solid green;
+}
+
+/*Стили для каталога в main*/
+.main-content-catalogue {
+    outline: 1px solid green;
+    min-height: 408px;
+    margin-bottom: 55px;
+}
+
+.catalogue-left {
+    outline: 1px solid yellow;
+    width: 620px;
+    float: left;
+
+}
+
+.catalogue-right {
+    outline: 1px solid yellow;
+    width: 300px;
+    float: right;
+}
+
+[class ^="item-" ] {
+    display: inline-block;
+}
+
+/*Стили для раздела "популярные товары" в main*/
+.main-content-popular-products {
+    outline: 1px solid green;
+    height: 424px;
+    margin-bottom: 25px;
+}
+
+.product {
+    display: inline-block;
+}
+
+
+/*Стили для раздела "популярные производители" в main*/
+.main-content-popular-brands {
+    outline: 1px solid green;
+    min-height: 415px;
+    margin-bottom: 87px;
+}
+
+.brand {
+    display: inline-block;
+}
+
+/*Стили для раздела "сервисы" в main*/
+.services {
+    outline: 1px solid green;
+    min-height: 520px;
+    margin-bottom: 25px;
+}
+
+.services img {
+    float: right;
+}
+
+/*Информация о компании + контакты*/
+.company-info {
+    outline: 1px solid green;
+    margin-bottom: 62px;
+    min-height: 450px;
+}
+
+.company-info-about {
+    outline: 1px solid yellow;
+    width: 620px;
+    float: left;
+}
+
+.company-info-contacts {
+    outline: 1px solid yellow;
+    width: 300px;
+    float: right;
+}
+
+/*Стили для footer*/
+.footer-top {
+    outline: 1px solid green;
+    min-height: 75px;
+    margin-bottom: 19px;
+}
+
+.footer-top li {
+    display: inline-block;
+}
+
+.footer-middle {
+    outline: 1px solid green;
+    min-height: 75px;
+    margin-bottom: 19px;
+}
+
+.footer-middle li {
+    display: inline-block;
+}
+
+.footer-bottom {
+    outline: 1px solid green;
+}
+
+.footer-bottom-left {
+    outline: 1px solid yellow;
+    width: 320px;
+    margin-right: 60px;
+    float: left;
+}
+
+.footer-bottom-middle {
+    outline: 1px solid yellow;
+    width: 180px;
+    margin-right: 60px;
+    float: left;
+}
+
+.footer-bottom-right {
+    outline: 1px solid yellow;
+    width: 320px;
+    float: right;
 }

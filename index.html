@@ -8,11 +8,13 @@
 <body>
     <div class="container">
         <header class="main-header">
-            <section class="main-header-top">
-                <div class="main-header-top-left">
-                    <div class="header-logo">
+            <section class="main-header-top clearfix">
+                <div class="header-logo">
+                    <a href="index.html">
                         <img src="img/technomart-header.png" alt="Техномарт" width="110" height="18">
-                    </div>
+                    </a>
+                </div>
+                <div class="header-search">
                     <form  action="#" method="get">
                         <input type="text" id="search-field" name="search-request">
                     </form>
@@ -23,29 +25,29 @@
                     <a href="#">Оформить заказ</a>
                 </div>
             </section>
-            <section class="main-header-bottom">
-                <div class="company-business">
+            <section class="main-header-bottom clearfix">
+                <div class="main-header-bottom-left">
                     <p>
                         Интернет-магазин
                         строительных материалов
                         и инструментов для ремонта
                     </p>
                 </div>
-                <div class="company-contacts">
-                    <div class="company-contacts-phone">
+                <div class="main-header-bottom-middle">
+                    <div class="company-phone">
                         +7&nbsp;(812)&nbsp;555-05-55
                     </div>
-                    <div class="company-contacts-address">
+                    <div class="company-address">
                         г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                     </div>
                 </div>
-            </section>
-            <section class="authorization">
-                <div class="authorization-login">
-                    <a href="#">Войти</a>
-                </div>
-                <div class="authorization-sign-up">
-                    <a href="#">Регистрация</a>
+                <div class="authorization">
+                    <div class="authorization-login">
+                        <a href="#">Войти</a>
+                    </div>
+                    <div class="authorization-sign-up">
+                        <a href="#">Регистрация</a>
+                    </div>
                 </div>
             </section>
             <nav class="main-menu">
@@ -77,7 +79,7 @@
     </div>
         <main class="main-content">
             <div class="container">
-                <section class="main-content-catalogue">
+                <section class="main-content-catalogue clearfix">
                     <!--Иконки будут делаться с помощью спрайтов-->
                     <div class="catalogue-left">
                         <div class="item-1">
@@ -104,31 +106,31 @@
                             <h2>
                                 Техника
                             </h2>
-                            <a href="#" class="item-3">для стройки</a>
+                            <a href="#">для стройки</a>
                             <span class="icon icon-build"></span>
                         </div>
-                        <div>
+                        <div class="item-4">
                             <h2>
                                 Скидки 50%
                             </h2>
-                            <a href="#" class="item-4">на 350 товаров</a>
+                            <a href="#">на 350 товаров</a>
                             <span class="icon icon-discounts"></span>
                         </div>
-                        <div>
+                        <div class="item-5">
                             <h2>
                                 Доставка
                             </h2>
-                            <a href="#" class="item-5">бесплатно</a>
+                            <a href="#">бесплатно</a>
                             <span class="icon icon-delivery"></span>
                         </div>
                     </div>
                 </section>
-                <section class="main-content-popular">
+                <section class="main-content-popular-products">
                         <div class="popular-header">
                             <h2>
                                 Популярные товары:
+                                <a  href="#" class="button">Все популярные товары</a>
                             </h2>
-                            <a  href="#" class="button">Все популярные товары</a>
                         </div>
                         <div class="popular-products">
                             <article class="product">
@@ -155,37 +157,37 @@
                                 <a  href="#" class="button">12500 Р.</a>
                             </article>
                         </div>
-                        <!--Использовал тот же класс .popular-header, что и ранее
-                        так как у них одинаковые стили-->
+                </section>
+                <section class="main-content-popular-brands">
                         <div class="popular-header">
                             <h2>
                                 Популярные производители:
+                                <a href="#" class="button">Все производители</a>
                             </h2>
-                            <a href="#" class="button">Все производители</a>
                         </div>
-                        <div class="popular-manufacturers">
-                            <div class="manufacturer">
+                        <div class="popular-brands">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/bosch.png" alt="BOSCH" width="126" height="37"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/makita.png" alt="Makita" width="123" height="40"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/dewalt.png" alt="DeWalt" width="146" height="44"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/interskol.png" alt="Интерскол" width="200" height="88"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/hitachi.png" alt="Hitachi" width="169" height="31"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/lg.png" alt="LG" width="121" height="73"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/aeg.png" alt="AEG" width="151" height="96"></a>
                             </div>
-                            <div class="manufacturer">
+                            <div class="brand">
                                 <a href="#"><img src="img/brands/metabo.png" alt="metabo" width="204" height="69"></a>
                             </div>
                         </div>
@@ -224,42 +226,44 @@
                         <img src="img/truck.png" alt="Изображение грузовика" width="468" height="261">
                     </div>
                 </section>
-                <section class="company-info">
-                    <h2>
-                        Компания &laquo;Техномарт&raquo;
-                    </h2>
-                    <p>
-                        Настоящий мужской шоппинг начинается здесь!
-                        Огромный выбор товаров для ремонта и строительства
-                        не оставит равнодушными любителей сэкономить на гастарбайтерах.
-                    </p>
-                    <p>
-                        Мы можем доставить ваш товар в самые отдалённые точки России!
-                        Техномарт работает со многими транспортными компаниями:
-                    </p>
-                    <ul>
-                        <li>
-                            Деловые линии
-                        </li>
-                        <li>
-                            Автотрейдинг
-                        </li>
-                        <li>
-                            ЖелДорЭкспедиция
-                        </li>
-                    </ul>
-                    <a href="" class="button">Подробнее о компании</a>
-                </section>
-                <section class="contacts">
-                    <h2>
-                        Контакты
-                    </h2>
-                    <p>
-                        Вы можете забрать товар сами,
-                        заехав в наш офис
-                    </p>
-                    <img src="img/map-small.jpg" alt="Найти нас на карте" width="300" height="158">
-                    <a href="#" class="button">Заблудились? Напишите нам!</a>
+                <section class="company-info clearfix">
+                    <div class="company-info-about">
+                        <h2>
+                            Компания &laquo;Техномарт&raquo;
+                        </h2>
+                        <p>
+                            Настоящий мужской шоппинг начинается здесь!
+                            Огромный выбор товаров для ремонта и строительства
+                            не оставит равнодушными любителей сэкономить на гастарбайтерах.
+                        </p>
+                        <p>
+                            Мы можем доставить ваш товар в самые отдалённые точки России!
+                            Техномарт работает со многими транспортными компаниями:
+                        </p>
+                        <ul>
+                            <li>
+                                Деловые линии
+                            </li>
+                            <li>
+                                Автотрейдинг
+                            </li>
+                            <li>
+                                ЖелДорЭкспедиция
+                            </li>
+                        </ul>
+                        <a href="" class="button">Подробнее о компании</a>
+                    </div>
+                    <div class="company-info-contacts">
+                        <h2>
+                            Контакты
+                        </h2>
+                        <p>
+                            Вы можете забрать товар сами,
+                            заехав в наш офис
+                        </p>
+                        <img src="img/map-small.jpg" alt="Найти нас на карте" width="300" height="158"><br>
+                        <a href="#" class="button">Заблудились? Напишите нам!</a>
+                    </div>
                 </section>
             </div>
         </main>
@@ -313,29 +317,28 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="footer-bottom">
-                    <div class="footer-copyright">
+                <div class="footer-bottom clearfix">
+                    <div class="footer-bottom-left">
                         <p>
                             &copy;2010-2016 Компания &laquo;Техномарт&raquo;<br>
                             Все права защищены
                         </p>
                     </div>
-                    <div class="footer-social">
+                    <div class="footer-bottom-middle">
                         <a href="#" class="social-btn social-btn-vk">Вконтакте</a>
                         <a href="#" class="social-btn social-btn-fb">Фейсбук</a>
                         <a href="#" class="social-btn social-btn-inst">Инстаграм</a>
                     </div>
-                    <div class="footer-mail">
+                    <div class="footer-bottom-right">
                         <p>
                             Обратная связь
+                            <a href="">mail@htmlacademy.ru</a>
                         </p>
-                        <a href="">mail@htmlacademy.ru</a>
-                    </div>
-                    <div class="footer-site-developer">
                         <p>
                             Разработано -
+                            <a href="https://htmlacademy.ru">htmlacademy.ru</a>
                         </p>
-                        <a href="https://htmlacademy.ru">htmlacademy.ru</a>
+
                     </div>
                 </div>
             </div>
