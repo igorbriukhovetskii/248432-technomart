@@ -8,11 +8,7 @@ body {
     font-family: "PT Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /*Забегая вперёд, решил смастерить бэкграунд*/
-    background-image:
-            linear-gradient(to bottom, #293449 42px, #f1f5f7 42px, #f1f5f7 320px,
-            #fff 320px, #fff 1793px, #f1f5f7 1793px, #f1f5f7 2315px,
-            #fff 2315px, #fff 2851px, #32425c 2851px, #32425c 3045px, #293449 3045px);
+
 }
 
 h1 {
@@ -31,6 +27,9 @@ h2 {
     font-family: "Cuprum", Arial, sans-serif;
 }
 
+div[class^="item-"] h2{
+    font-size: 24px;
+}
 
 .product p {
     font-size: 18px;
@@ -41,27 +40,35 @@ h2 {
     font-size: 17px;
 }
 
-div[class^="item-"] h2{
-    font-size: 24px;
-}
-
 div[class^="item-"] a,
 div[class^="item-"] span {
     font-size: 14px;
 }
 
+.catalogue-products-grid a {
+    font-size: 14px;
+}
+
+.breadcrumbs a,
+.catalogue-pagination a,
+.catalogue-section-showcase-controls h3,
+.catalogue-section-showcase-controls a {
+    font-size: 13px;
+}
+
+
+
 /*Нулевой размер шрифта, для удаления отступов в inline-block*/
-.main-content-catalogue {
+.popular-brands,
+.main-content-catalogue,
+.popular-products,
+.breadcrumbs,
+.catalogue-products-grid,
+.catalogue-pagination,
+.catalogue-section-showcase-controls {
     font-size: 0;
 }
 
-.popular-products {
-    font-size: 0;
-}
-
-.popular-brands {
-    font-size: 0;
-}
 
 /*Стили для <header> и его потомков*/
 .container {
@@ -75,14 +82,15 @@ div[class^="item-"] span {
     outline: 1px solid green;
     width: 940px;
     min-height: 320px;
-    background-color: #f1f5f7;
-    margin-bottom: 60px;
+    /*background-color: #f1f5f7;*/
+    /*margin-bottom: 60px;*/
 }
 
 .main-header-top {
     outline: 1px solid yellow;
+    min-height: 42px;
     margin-bottom: 10px;
-    background-color: #293449;
+    /*background-color: #293449;*/
 }
 
 .clearfix::after {
@@ -108,10 +116,9 @@ div[class^="item-"] span {
 
 .header-search {
     outline: 1px solid yellow;
-    min-height: 42px;
     width: 250px;
     float: left;
-    border-bottom: 5px solid #f1f5f7;
+    /*border-bottom: 5px solid #f1f5f7;*/
 }
 
 
@@ -119,21 +126,20 @@ div[class^="item-"] span {
 .main-header-top-right {
     outline: 1px solid yellow;
     width: 470px;
-    min-height: 42px;
     float: right;
-    border-bottom: 5px solid #f1f5f7;
+    /*border-bottom: 5px solid #f1f5f7;*/
 }
 
 .main-header-bottom {
     outline: 1px solid yellow;
     width: 940px;
+    min-height: 130px;
 
 }
 
 .main-header-bottom-left {
     outline: 1px solid yellow;
     width: 310px;
-    min-height: 153px;
     float: left;
 }
 
@@ -141,7 +147,6 @@ div[class^="item-"] span {
 .main-header-bottom-middle {
     outline: 1px solid yellow;
     width: 320px;
-    min-height: 153px;
     float: left;
 }
 
@@ -149,7 +154,6 @@ div[class^="item-"] span {
     outline: 1px solid yellow;
     width: 310px;
     float: right;
-    min-height: 153px;
 }
 
 .main-menu {
@@ -172,6 +176,7 @@ div[class^="item-"] span {
 .main-content-catalogue {
     outline: 1px solid green;
     min-height: 408px;
+    margin-top: 60px;
     margin-bottom: 55px;
 }
 
@@ -213,6 +218,16 @@ div[class^="item-"] span {
 
 .brand {
     display: inline-block;
+}
+
+/*Общие стили для разделов
+"популярные товары" и "популярные производители"*/
+.popular-header h2 {
+    float: left;
+}
+
+.popular-header a {
+    float: right;
 }
 
 /*Стили для раздела "сервисы" в main*/
@@ -288,4 +303,174 @@ div[class^="item-"] span {
     outline: 1px solid yellow;
     width: 320px;
     float: right;
+}
+
+/*Стили для модальных окон*/
+.write-us,
+.cart-plus {
+    display: none;
+}
+
+/*Стили для страницы каталога*/
+.breadcrumbs {
+    outline: 1px solid green;
+    margin-top: 13px;
+    margin-bottom: 19px;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+}
+
+/*Стили для заголовка текущего раздела каталога*/
+.catalogue-section-name {
+    outline: 1px solid green;
+    min-height: 87px;
+}
+
+/*Стили для продуктовой решётки с фильтрами*/
+.catalogue-section-showcase {
+    outline: 1px solid green;
+    margin-bottom: 60px;
+}
+
+
+/*Стили для колонки фильтра по цене,
+производителю и типу электропитания*/
+.item-filter {
+    outline: 1px solid yellow;
+    width: 220px;
+    min-height: 750px;
+    float: left;
+}
+
+/*Стили для фильтра товаров в продуктовой решётке*/
+.catalogue-section-showcase-controls {
+    outline: 1px solid yellow;
+    width: 700px;
+    min-height: 38px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.catalogue-section-showcase-controls h3 {
+    outline: 1px solid violet;
+    display: inline-block;
+    margin: 0 auto;
+    float: left;
+}
+
+.catalogue-product-grid-filter li,
+.catalogue-up-down-filter li {
+    display: inline-block;
+    float: right;
+}
+
+/*Стили для продуктовой решётки*/
+.catalogue-products-grid {
+    outline: 1px solid yellow;
+    width: 700px;
+    min-height: 1084px;
+    float: right;
+}
+
+.product {
+    outline: 1px solid navy;
+    width: 220px;
+    height: 317px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.product:nth-child(3n) {
+    margin-right: 0;
+}
+
+/*.product:nth-child(n+6) {
+    margin-bottom: 0;
+}*/
+
+/*Пагинатор продуктовой решётки*/
+.catalogue-pagination {
+    outline: 1px solid yellow;
+    float: left;
+    margin-top: 45px;
+}
+
+.catalogue-pagination li {
+    display: inline-block;
+}
+
+/*Стили для раздела "пара слов о перфораторах"*/
+.about-product {
+    outline: 1px solid red;
+    min-height: 240px;
+    margin-bottom: 21px;
+}
+
+/*Стили для "широкого" фона*/
+/*для хедера*/
+.main-header-top:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 42px;
+    background-color: #293449;
+    z-index: -1;
+}
+
+.main-header-bottom:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 280px;
+    background-color: #f2f6f8;
+    z-index: -2;
+}
+
+/*Для футера*/
+.footer-top:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 196px;
+    background-color: #32425c;
+    z-index: -1;
+}
+
+.footer-bottom:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 93px;
+    background-color: #293449;
+    z-index: -1;
+}
+
+/*Для каталога*/
+.about-product:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 280px;
+    background-color: #f2f6f8;
+    z-index: -1;
+}
+/*Для главной*/
+.services:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 520px;
+    background-color: #f2f6f8;
+    z-index: -1;
 }
