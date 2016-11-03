@@ -223,6 +223,7 @@ div[class^="item-"] span {
 /*Общие стили для разделов
 "популярные товары" и "популярные производители"*/
 .popular-header h2 {
+    margin-bottom: 47px;
     float: left;
 }
 
@@ -353,9 +354,10 @@ div[class^="item-"] span {
     margin-bottom: 20px;
 }
 
-.catalogue-section-showcase-controls h3 {
+.catalogue-section-showcase-controls h3,
+.catalogue-product-grid-filter,
+.catalogue-up-down-filter {
     outline: 1px solid violet;
-    display: inline-block;
     margin: 0 auto;
     float: left;
 }
@@ -363,7 +365,6 @@ div[class^="item-"] span {
 .catalogue-product-grid-filter li,
 .catalogue-up-down-filter li {
     display: inline-block;
-    float: right;
 }
 
 /*Стили для продуктовой решётки*/
@@ -384,13 +385,11 @@ div[class^="item-"] span {
     margin-bottom: 20px;
 }
 
-.product:nth-child(3n) {
+.product-index:last-child,
+.product-catalogue:nth-child(3n) {
     margin-right: 0;
 }
 
-/*.product:nth-child(n+6) {
-    margin-bottom: 0;
-}*/
 
 /*Пагинатор продуктовой решётки*/
 .catalogue-pagination {
