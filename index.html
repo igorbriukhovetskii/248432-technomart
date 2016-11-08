@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин "Техномарт"</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link  href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="main-header">
-            <section class="main-header-top clearfix">
+    <header class="main-header">
+        <div class="main-header-top">
+            <div class="container clearfix">
                 <div class="header-logo">
                     <a href="index.html">
                         <img src="img/technomart-header.png" alt="Техномарт" width="110" height="18">
@@ -20,36 +22,33 @@
                     </form>
                 </div>
                 <div class="main-header-top-right">
-                    <a href="#">Закладки</a>
-                    <a href="#">Корзина</a>
-                    <a href="#">Оформить заказ</a>
+                    <a class="bookmark-link" href="#">Закладки: 0</a>
+                    <a class="cart-link" href="#">Корзина: 0</a>
+                    <a class="place-order-link" href="#">Оформить заказ</a>
                 </div>
-            </section>
-            <section class="main-header-bottom clearfix">
+            </div>
+        </div>
+        <div class="main-header-bottom">
+            <div class="container clearfix">
                 <div class="main-header-bottom-left">
                     <p>
                         Интернет-магазин
-                        строительных материалов
+                        строительных материалов<br>
                         и инструментов для ремонта
                     </p>
                 </div>
                 <div class="main-header-bottom-middle">
                     <div class="company-phone">
-                        +7&nbsp;(812)&nbsp;555-05-55
+                        <span>+7&nbsp;(812)&nbsp;555-05-55</span>
                     </div>
                     <div class="company-address">
-                        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                        <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
                     </div>
                 </div>
                 <div class="authorization">
-                    <div class="authorization-login">
-                        <a href="#">Войти</a>
-                    </div>
-                    <div class="authorization-sign-up">
-                        <a href="#">Регистрация</a>
-                    </div>
+                    <a class="login-link" href="#">Войти</a>
+                    <a class="sign-up-link" href="#">Регистрация</a>
                 </div>
-            </section>
             <nav class="main-menu">
                 <ul>
                     <li>
@@ -59,7 +58,7 @@
                         <a href="#">Компания</a>
                     </li>
                     <li>
-                        <a href="#">Каталог</a>
+                        <a href="catalogue.html">Каталог</a>
                     </li>
                     <li>
                         <a href="#">Новости</a>
@@ -75,8 +74,9 @@
                     </li>
                 </ul>
             </nav>
+            </div>
+            </div>
         </header>
-    </div>
         <main class="main-content">
             <div class="container">
                 <section class="main-content-catalogue clearfix">
