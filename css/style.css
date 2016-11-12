@@ -374,7 +374,7 @@ div[class^="item-"] span {
     list-style: none;
     width: 940px;
     margin: 0;
-    padding: 0 21px;
+    padding: 0 20px;
     font-size: 0;
     box-sizing: border-box;
 }
@@ -397,7 +397,7 @@ div[class^="item-"] span {
 /*Стили для промо-блока в main*/
 .main-content-promo {
     min-height: 408px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
 }
 
 .promo-left {
@@ -553,7 +553,7 @@ div[class^="item-"] span {
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
-    margin-top: 18px;
+    margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #e5e5e5;
 }
@@ -655,11 +655,11 @@ div[class^="item-"] span {
     display: inline-block;
     vertical-align: top;
     width: 220px;
-    min-height: 145px;
+    min-height: 143px;
     box-sizing: border-box;
-    margin-top: 21px;
+    margin-top: 20px;
     margin-right: 20px;
-    border: 1px solid #999999;
+    border: 1px solid #e7e7e7;
 }
 
 .brand:nth-child(4n) {
@@ -668,8 +668,9 @@ div[class^="item-"] span {
 
 .brand-wrapper {
     display: flex;
+    margin: auto;
     width: 100%;
-    height: 141px;
+    height: 143px;
 }
 
 .brand a {
@@ -678,8 +679,8 @@ div[class^="item-"] span {
 
 .brand-img {
     vertical-align: middle;
-    max-width: 218px;
-    max-height: 140px;
+    width: 218px;
+    height: 143px;
 }
 
 
@@ -695,7 +696,7 @@ div[class^="item-"] span {
 .main-popular-products h2 {
     float: left;
     max-width: 600px;
-    margin-top: 28px;
+    margin-top: 30px;
     margin-left: 28px;
     text-transform: uppercase;
     color: #32425c;
@@ -721,7 +722,7 @@ div[class^="item-"] span {
 .popular-header .button {
     float: right;
     width: 253px;
-    margin-top: 23px;
+    margin-top: 25px;
     margin-bottom: 23px;
     margin-right: 24px;
     padding-top: 11px;
