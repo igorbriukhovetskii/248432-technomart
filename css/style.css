@@ -153,6 +153,7 @@ div[class^="item-"] span {
     font-size: 17px;
     line-height: 1.06;
     color: #ffffff;
+    outline: none;
 }
 
 .header-search input:focus {
@@ -191,12 +192,10 @@ div[class^="item-"] span {
     text-decoration: none;
     color: #ffffff;
     display: inline-block;
-    padding-right: 0;
-    padding-top: 9px;
 }
 
 .bookmark-link {
-    padding-left: 45px;
+    padding: 9px 5px 9px 45px;
     position: relative;
 }
 
@@ -212,7 +211,7 @@ div[class^="item-"] span {
 }
 
 .cart-link {
-    padding-left: 50px;
+    padding: 9px 5px 9px 50px;
     position: relative;
 }
 
@@ -228,7 +227,7 @@ div[class^="item-"] span {
 }
 
 .place-order-link {
-    padding-left: 20px;
+    padding: 9px 5px 9px 20px;
     background-color: #63a63e;
 }
 
@@ -253,6 +252,11 @@ div[class^="item-"] span {
 }
 
 .not-empty {
+    background-color: #ee3643;
+}
+
+a.not-empty:active {
+    opacity: 0.6;
     background-color: #ee3643;
 }
 
@@ -511,6 +515,7 @@ div[class^="item-"] span {
 
 .user-block-orders-link:active,
 .user-block-profile-link:active {
+    color: #32425c;
     opacity: 0.3;
 }
 
@@ -880,6 +885,14 @@ div[class^="item-"] span {
 
 }
 
+.product .item-price:hover::after {
+    border-left-color: #ca2c37;
+}
+
+.product .item-price:active::after {
+    border-left-color: #ba2732;
+}
+
 .product .product-actions {
     position: absolute;
     top: 0;
@@ -924,10 +937,6 @@ div[class^="item-"] span {
     opacity: 0.3;
 }
 
-.product-actions .buy:active::after {
-    opacity: 0.3;
-}
-
 .product-actions .buy:hover::after,
 .product-actions .buy:active::after {
     opacity: 1.0;
@@ -937,6 +946,14 @@ div[class^="item-"] span {
     background-color: #5fbb2d;
     border-color: transparent;
     border-bottom-color: #367315;
+}
+
+.product-actions .bookmark:hover {
+    border-color: #32425c;
+}
+
+.product-actions .buy:active::after {
+    opacity: 0.3;
 }
 
 .product-actions .buy:active {
@@ -950,9 +967,7 @@ div[class^="item-"] span {
     border-bottom-color: #63a63e;
 }
 
-.product-actions .bookmark:hover {
-    border-color: #32425c;
-}
+
 
 .product-actions .bookmark:active {
     opacity: 0.3;
@@ -1065,6 +1080,13 @@ div[class^="item-"] span {
     border-radius: 3px;
 }
 
+.button:hover {
+    background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
+}
 
 .popular-header .button {
     float: right;
@@ -1205,16 +1227,12 @@ a.active-option {
 /*Сортировка каталога вверх-вниз*/
 .catalogue-up-down-filter {
     width: 105px;
+    position: relative;
 }
 
 .filter-up,
 .filter-down {
-    position: relative;
-}
 
-.filter-up a,
-.filter-down a {
-    font-size: 0;
 }
 
 .filter-up::before {
@@ -1223,7 +1241,7 @@ a.active-option {
     position: absolute;
     width: 0;
     height: 0;
-    top: -7px;
+    top: 6px;
     left: 47px;
     border-bottom: 9px solid transparent;
     border-top: 9px solid transparent;
@@ -1237,7 +1255,7 @@ a.active-option {
     position: absolute;
     width: 0;
     height: 0;
-    top: 2px;
+    top: 14px;
     left: 79px;
     border-bottom: 9px solid transparent;
     border-top: 9px solid transparent;
@@ -1474,8 +1492,8 @@ a.active-option {
 
 .radio-indicator {
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     top: -1px;
     left: -1px;
     border: 3px solid #c1c1c1;
@@ -1493,10 +1511,10 @@ a.active-option {
 .power-filter-radio input[type="radio"]:checked +.radio-indicator::after {
     content: "";
     position: absolute;
-    width: 7px;
-    height: 7px;
-    top: 6px;
-    left: 6px;
+    width: 8px;
+    height: 8px;
+    top: 5px;
+    left: 5px;
     background-color: #c1c1c1;
     border-radius: 50%;
 }
@@ -1510,7 +1528,9 @@ a.active-option {
     opacity: 0.3;
 }
 
+/*Стили для кнопок каталога*/
 .catalogue-btn {
+    display: inline-block;
     width: 140px;
     min-height: 38px;
     margin: 0;
@@ -1521,22 +1541,21 @@ a.active-option {
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
-    outline: none;
+    text-align: center;
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
 }
 
-/*Общие стили для состояний кнопок каталога*/
-.filter-btn:hover,
-.pagination-btn:hover,
-.next-btn:hover {
-    border-color: #bdc6ca;
+.items-filter .catalogue-btn {
+    padding: 10px 9px 9px;
 }
 
-.filter-btn:active,
-.pagination-btn:active,
-.next-btn:active {
+/*Общие стили для состояний кнопок каталога*/
+.catalogue-btn:hover {
+    border-color: #bdc6ca;
+}
+.catalogue-btn:active {
     border-color: #ee3643;
 }
 
@@ -1560,7 +1579,6 @@ a.active-option {
 
 .pagination-btn,
 .next-btn {
-    display: inline-block;
     text-align: center;
     padding: 9px;
 }
