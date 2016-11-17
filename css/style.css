@@ -1753,6 +1753,7 @@ a.active-option {
 }
 
 .services-menu {
+    float: left;
     display: inline-block;
     vertical-align: top;
     width: 240px;
@@ -1760,7 +1761,7 @@ a.active-option {
     position: relative;
 }
 
-.services-menu a {
+.services-menu label {
     display: block;
     width: 240px;
     min-height: 61px;
@@ -1771,29 +1772,15 @@ a.active-option {
     border-bottom: 1px solid #293449;
     background-color: #2f3e57;
     text-decoration: none;
+    font-family: "Cuprum", Arial, sans-serif;
     font-weight: bold;
     font-size: 21px;
     line-height: 1.43;
     color: #ffffff;
 }
 
-.services-menu .active,
-.services-menu .active:hover {
-    background-color: #ffffff;
-    border-top-color: #ffffff;
-    border-bottom-color: #ffffff;
-    color: #32425c;
-}
-
-.services-menu .active:hover {
-
-}
-
-.services-menu a:hover {
+.services-menu label:hover {
     background-color: #293449;
-    color: #ffffff;
-    border-top-color: #3c4c63;
-    border-bottom-color: #293449;
 }
 
 .services-menu::after {
@@ -1807,15 +1794,27 @@ a.active-option {
     background: transparent url("../img/menu-decoration.png") no-repeat;
 }
 
-.delivery {
+.service {
     float: right;
     min-height: 285px;
     margin-top: 0;
     width: 620px;
+    display: none;
+}
+
+.service:nth-child(1) {
     background: transparent url("../img/truck.png") no-repeat 151px 24px;
 }
 
-.delivery h2 {
+.service:nth-child(2){
+    background: transparent url("../img/services/guarantee.png") no-repeat 230px 0;
+}
+
+.service:nth-child(3) {
+    background: transparent url("../img/services/credit.png") no-repeat 151px 0;
+}
+
+.service h2 {
     margin-top: 0;
     padding-top: 5px;
     padding-left: 1px;
@@ -1825,10 +1824,35 @@ a.active-option {
     color: #32425c;
 }
 
-.delivery p {
-    width: 275px;
+.service p {
+    width: 280px;
     padding-top: 2px;
     margin-top: 0;
+}
+
+.service a.button {
+    width: 195px;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+input[id^="services-"] {
+    display: none;
+}
+
+#services-btn-1:checked ~ .services-stack .service:nth-child(1),
+#services-btn-2:checked ~ .services-stack .service:nth-child(2),
+#services-btn-3:checked ~ .services-stack .service:nth-child(3) {
+    display:  block;
+}
+
+#services-btn-1:checked ~ .services-menu label[for="services-btn-1"],
+#services-btn-2:checked ~ .services-menu label[for="services-btn-2"],
+#services-btn-3:checked ~ .services-menu label[for="services-btn-3"]{
+    background-color: #ffffff;
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+    color: #32425c;
 }
 
 /*Информация о компании + контакты*/

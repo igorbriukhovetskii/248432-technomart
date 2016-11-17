@@ -102,7 +102,7 @@
                                 <span class="slider-arrow arrow-left"></span>
                                 <span class="slider-arrow arrow-right"></span>
                             </div>
-                            <a class="button slider-btn" href="#">
+                            <a class="button slider-btn" href="catalogue.html">
                                 Открыть каталог
                             </a>
                             <div class="slides">
@@ -270,21 +270,53 @@
                             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                         </p>
                             </div>
+                    <input type="radio" id="services-btn-1" name="services-toggle" checked>
+                    <input type="radio" id="services-btn-2" name="services-toggle">
+                    <input type="radio" id="services-btn-3" name="services-toggle">
                     <nav class="services-menu">
-                        <a class="active">Доставка</a>
-                        <a href="#">Гарантия</a>
-                        <a href="#">Кредит</a>
-                    </nav>
-                    <div class="delivery">
-                        <h2>
+                        <label for="services-btn-1">
                             Доставка
-                        </h2>
-                        <p>
-                            Мы с удовольствием доставим ваш товар
-                            прямо к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем,<br>
-                            поднимая его на ваш на этаж!
-                        </p>
+                        </label>
+                        <label for="services-btn-2">
+                            Гарантия
+                        </label>
+                        <label for="services-btn-3">
+                            Кредит
+                        </label>
+                    </nav>
+                    <div class="services-stack clearfix">
+                        <div class="service">
+                            <h2>
+                                Доставка
+                            </h2>
+                            <p>
+                                Мы с удовольствием доставим ваш товар
+                                прямо к вашему подъезду совершенно бесплатно!<br>
+                                Ведь мы неплохо заработаем,<br>
+                                поднимая его на ваш на этаж!
+                            </p>
+                        </div>
+                        <div class="service">
+                            <h2>
+                                Гарантия
+                            </h2>
+                            <p>
+                                Если купленный у нас товар поломается или заискрит,
+                                а также в случае пожара, спровоцированного его возгаранием,
+                                вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                                Дом уж восстановите как-нибудь сами.
+                            </p>
+                        </div>
+                        <div class="service">
+                            <h2>
+                                Кредит
+                            </h2>
+                            <p>
+                                Залезть в долговую яму стало проще!
+                                Кредитные консультанты придут вам на помощь.
+                            </p>
+                            <a class="button" href="#">Отправить заявку</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -324,7 +356,9 @@
                             Вы можете забрать товар сами,<br>
                             заехав в наш офис
                         </p>
-                        <img src="img/map-small.jpg" alt="Найти нас на карте" width="300" height="158"><br>
+                        <a href="#">
+                            <img src="img/map-small.jpg" alt="Найти нас на карте" width="300" height="158"><br>
+                        </a>
                         <a href="#" class="button">Заблудились? Напишите нам!</a>
                     </div>
                 </div>
