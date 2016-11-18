@@ -356,10 +356,12 @@
                             Вы можете забрать товар сами,<br>
                             заехав в наш офис
                         </p>
-                        <a href="#">
-                            <img src="img/map-small.jpg" alt="Найти нас на карте" width="300" height="158"><br>
-                        </a>
-                        <a href="#" class="button">Заблудились? Напишите нам!</a>
+                        <div class="interactive-map" id="interactive-map">
+                            <script type="text/javascript" charset="utf-8" async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=w_nXB-OVD5gLJR8DN0M_PviUF_AYp3Kc&amp;
+                            width=300&amp;height=158&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=interactive-map"></script>
+                        </div>
+                        <a href="#" class="button" id="write-us">Заблудились? Напишите нам!</a>
                     </div>
                 </div>
             </section>
@@ -443,10 +445,10 @@
                 </div>
             </div>
         </footer>
-        <div class="write-us hide">
+        <div class="write-us">
             <form action="#" method="post">
                 <div class="write-us-top modal-window-container clearfix">
-                    <button class="modal-window-close-btn">Закрыть</button>
+                    <button class="modal-window-close-btn" title="Закрыть">Закрыть</button>
                     <div class="write-us-name">
                         <label for="write-us-name">Ваше имя:</label>
                         <input type="text" id="write-us-name" name="user-name" placeholder="Представьтесь, пожалуйста">
@@ -457,7 +459,7 @@
                     </div>
                     <div class="write-us-text">
                         <label for="write-us-text">Текст письма:</label>
-                        <textarea id="write-us-text" name="user-message">В свободной форме</textarea>
+                        <textarea id="write-us-text" name="user-message" placeholder="В свободной форме"></textarea>
                     </div>
                 </div>
                 <div class="write-us-bottom">
@@ -467,10 +469,30 @@
                 </div>
             </form>
         </div>
-        <div class="overlay hide"></div>
-        <div class="map-popup hide">
-            <button class="modal-window-close-btn">Закрыть</button>
-            <div class="interactive-map"></div>
+        <div class="overlay"></div>
+        <div class="map-popup" id="map-popup">
+            <button class="modal-window-close-btn" id="map-close">Закрыть</button>
+            <div class="interactive-map-popup">
+                <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=w_nXB-OVD5gLJR8DN0M_PviUF_AYp3Kc&amp;
+                width=940&amp;height=446&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=map-popup"></script>
+            </div>
         </div>
+    <div class="cart-plus">
+        <div class="cart-plus-top">
+            <div class="modal-window-container">
+                <button class="modal-window-close-btn" id="cart-plus-close-btn"></button>
+                <div class="cart-added"></div>
+                <span>Товар добавлен в корзину!</span>
+            </div>
+        </div>
+        <div class="cart-plus-bottom">
+            <div class="modal-window-container">
+                <button class="button">Оформить заказ</button>
+                <button class="button">Продолжить покупки</button>
+            </div>
+        </div>
+    </div>
+    <script rel="script" src="js/script.js"></script>
     </body>
 </html>
