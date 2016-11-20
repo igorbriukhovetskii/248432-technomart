@@ -18,7 +18,6 @@ var cartContinueShopping = cartPlus.querySelector("#cart-popup-close");
 
 writeUsOpen.addEventListener("click", function (event) {
     event.preventDefault();
-    console.log("default prevented");
     overlay.classList.add("show-overlay");
     popupWriteUs.classList.add("show-content");
     if (localStorage.getItem("writeUsName")) {
