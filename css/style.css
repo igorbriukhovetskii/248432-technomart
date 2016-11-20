@@ -1126,13 +1126,13 @@ a.not-empty:active {
     padding-right: 15px;
     padding-left: 15px;
 
-    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 1.15;
 
     text-align: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.01em;
 }
 
 .product .discount {
@@ -2291,6 +2291,10 @@ a.interactive-map {
     min-height: 193px;
 
     background-color: #32425c;
+}
+
+.footer-logo {
+    float: left;
 }
 
 .footer-logo a {
