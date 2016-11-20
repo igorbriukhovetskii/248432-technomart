@@ -1804,7 +1804,7 @@ a.active-option {
 }
 
 .service:nth-child(1) {
-    background: transparent url("../img/truck.png") no-repeat 151px 24px;
+    background: transparent url("../img/services/delivery.png") no-repeat 151px 24px;
 }
 
 .service:nth-child(2){
@@ -1936,13 +1936,25 @@ input[id^="services-"] {
     margin-top: 29px;
 }
 
-.interactive-map {
+/*Стили для интерактивной карты на главной*/
+a.interactive-map {
+    display: block;
     width: 300px;
     height: 158px;
     margin-top: 31px;
     margin-bottom: 40px;
     background: transparent url("../img/map-small.jpg") no-repeat;
     overflow: hidden;
+}
+
+/*Скрытие кнопок Яндекс-карты и отключение перехода по ссылке на Яндекс-карты*/
+[class*="_bottom"] {
+    pointer-events: none;
+}
+
+[role="button"],
+.interactive-map [class*="zoom"] {
+    visibility: hidden;
 }
 
 .company-info-contacts .button {

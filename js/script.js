@@ -8,12 +8,13 @@ var writeUsForm = popupWriteUs.querySelector("form");
 var writeUsName = popupWriteUs.querySelector("#write-us-name");
 var writeUsMail = popupWriteUs.querySelector("#write-us-mail");
 var writeUsText = popupWriteUs.querySelector("#write-us-text");
-var interactiveMap = document.querySelector(".interactive-map");
+var map = document.querySelector("#map");
 var mapPopup = document.querySelector(".map-popup");
 var closeMapPopup = mapPopup.querySelector("#map-close");
 var addItem = document.querySelectorAll(".buy");
 var cartPlus = document.querySelector(".cart-plus");
 var cartPlusClose = cartPlus.querySelector(".modal-window-close-btn");
+var cartContinueShopping = cartPlus.querySelector("#cart-popup-close");
 
 writeUsOpen.addEventListener("click", function (event) {
     event.preventDefault();
@@ -64,7 +65,7 @@ window.addEventListener("keydown", function (event) {
 });
 
 /*Управление всплывающим окном интерактивной карты*/
-interactiveMap.addEventListener("click", function (event) {
+map.addEventListener("click", function (event) {
    event.preventDefault();
    overlay.classList.add("show-overlay");
    mapPopup.classList.add("show-content");
@@ -88,13 +89,19 @@ window.addEventListener("load", function() {
     for (var i = 0; i < addItem.length; i++) {
         addItem[i].addEventListener("click", function (event) {
             event.preventDefault();
-            console.log("buy clicked");
             overlay.classList.add("show-overlay");
             cartPlus.classList.add("show-content");
         });
     }
 });
+
 cartPlusClose.addEventListener("click", function (event) {
+    event.preventDefault();
+    cartPlus.classList.remove("show-content");
+    overlay.classList.remove("show-overlay");
+});
+
+cartContinueShopping.addEventListener("click", function (event) {
     event.preventDefault();
     cartPlus.classList.remove("show-content");
     overlay.classList.remove("show-overlay");
@@ -106,9 +113,6 @@ window.addEventListener("keydown", function (event) {
         overlay.classList.remove("show-overlay");
     }
 });
-
-
-
 
 
 

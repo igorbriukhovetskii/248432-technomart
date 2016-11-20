@@ -4,6 +4,7 @@ var overlay = document.querySelector(".overlay");
 var addItem = document.querySelectorAll(".buy");
 var cartPlus = document.querySelector(".cart-plus");
 var cartPlusClose = cartPlus.querySelector(".modal-window-close-btn");
+var cartContinueShopping = cartPlus.querySelector("#cart-popup-close");
 
 window.addEventListener("load", function() {
     for (var i = 0; i < addItem.length; i++) {
@@ -16,6 +17,12 @@ window.addEventListener("load", function() {
     }
 });
 cartPlusClose.addEventListener("click", function (event) {
+    event.preventDefault();
+    cartPlus.classList.remove("show-content");
+    overlay.classList.remove("show-overlay");
+});
+
+cartContinueShopping.addEventListener("click", function (event) {
     event.preventDefault();
     cartPlus.classList.remove("show-content");
     overlay.classList.remove("show-overlay");
